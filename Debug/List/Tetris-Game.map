@@ -1,0 +1,24 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+Matrix                                                                            0x0200     128
+pattern                                                                           0x0280     128
+pattern2                                                                          0x0300     128
+_seed (stdlib.lib)                                                                0x0380       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+MatrixInit                                                                        0x00104     25
+MatrixPrint                                                                       0x0011D     37
+MatrixSet                                                                         0x00142     24
+MatrixSet2                                                                        0x0015A     26
+main                                                                              0x00174     19
