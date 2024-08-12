@@ -1,10 +1,9 @@
 RAM Allocation [bytes]
 Variable                                                                          Address   Size
 ------------------------------------------------------------------------------------------------
-Matrix                                                                            0x0200     128
-pattern                                                                           0x0280     128
-pattern2                                                                          0x0300     128
-_seed (stdlib.lib)                                                                0x0380       4
+mMatrix                                                                           0x0200     240
+mCurrentPiece                                                                     0x02F0      32
+_seed (stdlib.lib)                                                                0x0310       4
 
 EEPROM Allocation [bytes]
 Variable                                                                          Address   Size
@@ -13,12 +12,34 @@ Variable                                                                        
 Register Allocation
 Variable                                                                          Register  Size
 ------------------------------------------------------------------------------------------------
+nPosX                                                                             R3,R4        2
+nPosY                                                                             R5,R6        2
+nGetNextPiece                                                                     R8           1
+GameOver                                                                          R7           1
 
 FLASH Allocation [words]
 Function                                                                          Address   Size
 ------------------------------------------------------------------------------------------------
-MatrixInit                                                                        0x00104     25
-MatrixPrint                                                                       0x0011D     37
-MatrixSet                                                                         0x00142     24
-MatrixSet2                                                                        0x0015A     26
-main                                                                              0x00174     19
+mAssignTetromino                                                                  0x0017E     38
+mPlacePiece                                                                       0x001A4     32
+mRemovePiece                                                                      0x001C4     28
+mLockPiece                                                                        0x001E0      4
+mRotate                                                                           0x001E4    118
+mPrintMatrix                                                                      0x0025A     38
+mDoesPieceFit                                                                     0x00280     61
+mPieceMove                                                                        0x002BD     13
+mPushPieceDown                                                                    0x002CA     18
+mGetUserInput                                                                     0x002DC     46
+mClearFullRows                                                                    0x0030A     96
+mGetRandomTetrominoIndex                                                          0x0036A      6
+mGetGameOver                                                                      0x00370     32
+read_buttons                                                                      0x00390     46
+mPrintGameOver                                                                    0x003BE     28
+main                                                                              0x003DA     50
+putchar                                                                           0x0040C     10
+put_usart_G100                                                                    0x00416     14
+_print_G100                                                                       0x00424    296
+printf                                                                            0x0054C     39
+rand                                                                              0x00573     28
+strlen                                                                            0x0058F     12
+strlenf                                                                           0x0059B     13
